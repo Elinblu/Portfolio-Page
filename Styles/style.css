@@ -1,91 +1,136 @@
 body {
-  font-family: "Montserrat", sans-serif;
-  background-color: #f2f5e3;
+  background-color: #0a0a0a;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
   text-align: center;
-  padding-top: 60px;
-}
-
-body,
-p,
-a,
-button,
-span,
-.navbar,
-.footer,
-.project-card {
-  font-family: "Montserrat", sans-serif;
-}
-
-h1,
-h2,
-h3,
-.sliding-text {
-  font-family: "Playfair Display SC", serif;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar {
-  background: #f2f5e3;
-  transition: background 0.3s ease-in-out;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: transparent;
+  transition: background 0.4s ease-in-out;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar.scrolled {
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(8px);
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .navbar-brand {
-  font-weight: 700;
-  color: #569870 !important;
+  font-size: 24px;
+  font-weight: bold;
+  color: #8f00ff !important;
+  margin-left: 20px;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff !important;
+  margin: 0 15px;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #8f00ff !important;
 }
 
 .navbar-toggler {
   border: none;
   background: transparent;
   font-size: 24px;
-  color: #569870;
+  color: #ffffff !important;
+  transition: color 0.3s ease-in-out;
+  display: none;
 }
 
 .navbar-toggler:hover {
-  color: #3c6f58;
+  color: #8f00ff !important;
 }
 
-.navbar-nav .nav-link {
-  font-weight: 500;
-  color: #569870 !important;
-  transition: color 0.3s ease-in-out;
-}
+@media (max-width: 992px) {
+  .navbar-toggler {
+    display: block;
+  }
 
-.navbar-nav .nav-link:hover {
-  color: #3c6f58 !important;
+  .navbar-collapse {
+    display: none;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(10, 10, 10, 0.95);
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .navbar-collapse.show {
+    display: block;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 10px 0;
+  }
 }
 
 .hero {
-  background-color: #569870;
-  color: white;
-  padding: 100px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: radial-gradient(
+    circle,
+    rgba(143, 0, 255, 0.15) 0%,
+    transparent 100%
+  );
 }
 
 .hero h1 {
-  font-size: 48px;
-  font-weight: bold;
-}
-
-.hero h2 {
-  font-size: 20px;
-  font-weight: 300;
-}
-
-.hero-subtitle {
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 60px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 15px;
 }
 
 .sliding-text {
   font-size: 22px;
-  font-weight: 600;
-  margin-top: 20px;
-  height: 40px;
+  font-weight: 400;
+  color: #bbbbbb;
+  height: 30px;
   overflow: hidden;
-  position: relative;
+  white-space: nowrap;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  max-width: 500px;
 }
 
 .word {
@@ -98,101 +143,92 @@ h3,
   opacity: 1;
 }
 
-.image-section {
-  text-align: center;
-  margin: 40px 0;
-}
-
-.hero-image {
-  width: 80%;
-  max-width: 600px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
 .projects-section {
-  padding: 60px 0;
-  background-color: #f2f5e3;
+  padding: 80px 20px;
+  background-color: #111;
 }
 
 .section-title {
-  text-align: center;
   font-size: 28px;
-  font-weight: bold;
+  font-weight: 700;
+  color: #ffffff;
   margin-bottom: 30px;
-  font-family: "Playfair Display SC", serif;
+}
+
+.projects-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .project-card {
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease-in-out;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.project-image {
-  width: 100%;
-  height: auto;
-  border-bottom: 2px solid #569870;
-}
-
-.project-info {
+  background: #1a1a1a;
+  border-radius: 12px;
   padding: 20px;
-}
-
-.project-title {
-  font-size: 22px;
-  font-weight: 700;
-  font-family: "Playfair Display SC", serif;
-  margin-bottom: 10px;
-}
-
-.project-description {
-  font-size: 16px;
-  color: #666;
-  font-family: "Montserrat", sans-serif;
-}
-
-.read-more {
-  display: inline-block;
-  margin-top: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  color: #569870;
-  transition: color 0.3s ease-in-out;
-}
-
-.read-more:hover {
-  color: #3c6f58;
+  width: 320px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .project-card:hover {
-  transform: scale(1.03);
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(143, 0, 255, 0.4);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.project-card h3 {
+  font-size: 20px;
+  color: #ffffff;
+  margin-top: 15px;
+}
+
+.project-card p {
+  font-size: 15px;
+  color: #bbbbbb;
 }
 
 .footer {
-  background-color: #569870;
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-  margin-top: 40px;
+  background-color: #0a0a0a;
+  padding: 30px;
+  font-size: 16px;
+  color: #ffffff;
 }
 
-.footer .social-icons a {
-  color: white;
+.social-icons a {
+  color: #ffffff;
   font-size: 24px;
   margin: 0 10px;
   transition: color 0.3s ease-in-out;
 }
 
-.footer .social-icons a:hover {
-  color: #d4edda;
+.social-icons a:hover {
+  color: #8f00ff;
 }
 
-.footer p {
-  font-size: 14px;
-  font-weight: 300;
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .sliding-text {
+    font-size: 18px;
+  }
+
+  .projects-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 90%;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
 }
