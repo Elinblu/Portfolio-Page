@@ -1,8 +1,21 @@
 h1 {
-  color: blue;
   font-family: "Playfair Display SC", serif;
+  font-weight: bold;
+  font-size: 36px;
+  padding: 15px 30px;
 }
 h2 {
   font-family: "Montserrat", serif;
-  font-size: 10px;
+  font-size: 15px;
+  padding: 10px;
+}
+
+.hero {
+  background-color: #569870;
+  text-align: center;
+}
+
+.hero p {
+  font-family: "Montserrat", serif;
+  font-size: 15px;
 }
