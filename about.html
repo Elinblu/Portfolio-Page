@@ -51,15 +51,21 @@
       </div>
     </nav>
 
-    <!-- About Section -->
     <section class="about">
       <div class="container">
         <h1>About</h1>
-        <div class="about-content">
-          <div class="profile-image">
-            <img src="images/meg .png" alt="Elin Blütecher Holter" />
+        <div class="row align-items-center">
+          <!-- Profilbilde til venstre -->
+          <div class="col-lg-5 text-center">
+            <img
+              src="images/meg .png"
+              alt="Elin Blütecher Holter"
+              class="profile-image"
+            />
           </div>
-          <div class="bio">
+
+          <!-- Tekst + knapper til høyre -->
+          <div class="col-lg-7 text-lg-left text-center">
             <p>
               Hello! I’m Elin, a designer and technologist specializing in
               immersive technologies, user experience design, and 3D graphics.
@@ -74,52 +80,187 @@
               I love combining creativity and technology to build interactive
               experiences.
             </p>
-            <a href="cv.pdf" class="btn-download">Download CV</a>
+
+            <!-- Knapper for Download CV & Contact Me -->
+            <div class="button-group">
+              <a href="cv.pdf" class="btn-download">Download CV</a>
+              <a href="contact.html" class="btn-contact">Contact Me</a>
+            </div>
           </div>
         </div>
 
         <!-- Skills Section -->
         <div class="skills">
           <h2>Skills</h2>
-          <div class="skill-list">
-            <span>Adobe After Effects</span>
-            <span>Adobe Photoshop</span>
-            <span>Adobe Illustrator</span>
-            <span>Adobe InDesign</span>
-            <span>Adobe Premiere Pro</span>
-            <span>Adobe XD</span>
-            <span>Unity</span>
-            <span>Figma</span>
-            <span>Blender</span>
-            <span>HTML & CSS</span>
-            <span>JavaScript</span>
-            <span>UX/UI</span>
+
+          <div class="skill-category">
+            <h3>Design</h3>
+            <div class="skill-list">
+              <span>Adobe After Effects</span>
+              <span>Adobe Photoshop</span>
+              <span>Adobe Illustrator</span>
+              <span>Adobe InDesign</span>
+              <span>Adobe Premiere Pro</span>
+              <span>Adobe XD</span>
+              <span>Figma</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>Development</h3>
+            <div class="skill-list">
+              <span>HTML & CSS</span>
+              <span>JavaScript</span>
+              <span>React</span>
+              <span>C#</span>
+              <span>C++</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>XR & 3D</h3>
+            <div class="skill-list">
+              <span>Unity</span>
+              <span>Blender</span>
+              <span>Spark AR</span>
+              <span>Maya</span>
+            </div>
           </div>
         </div>
 
-        <!-- Timeline -->
-        <div class="timeline">
-          <h2>Experience</h2>
-          <div class="timeline-item">
-            <span class="date">2023</span>
-            <p>
-              Master’s Degree in Virtual & Augmented Reality, Goldsmiths,
-              University of London
-            </p>
-          </div>
-          <div class="timeline-item">
-            <span class="date">2022</span>
-            <p>
-              Bachelor’s Degree in Graphic Design & Animation, University of
-              Huddersfield
-            </p>
-          </div>
-          <div class="timeline-item">
-            <span class="date">2021-2024</span>
-            <p>Freelance Designer & Developer</p>
-          </div>
-        </div>
+        <!-- Experience Section -->
+ <div class="experience">
+  <h2>Experience</h2>
+  <div class="timeline">
+
+    <!-- 2025 - Forward -->
+    <div class="timeline-item">
+      <div class="timeline-date"><i class="fas fa-forward"></i> 2025</div>
+      <div class="timeline-content">
+        <h3>Looking ahead</h3>
+        <p>Excited to transition into a career where my education is put to use. Actively looking for a more relevant position.</p>
       </div>
+    </div>
+
+    <!-- 2025 - Moving to Oslo -->
+    <div class="timeline-item">
+      <div class="timeline-date"><i class="fas fa-city"></i> 2025</div>
+      <div class="timeline-content">
+        <h3>Planning to move to Oslo</h3>
+        <p>Currently living in Ski, 20 min outside the city.</p>
+      </div>
+    </div>
+
+    <!-- 2025 - Telia -->
+    <div class="timeline-item">
+      <div class="timeline-date"><i class="fas fa-building"></i> 2025</div>
+      <div class="timeline-content">
+        <h3>Customer Advisor at Telia</h3>
+        <p>TV & Broadband – first office job.</p>
+      </div>
+    </div>
+
+    <!-- 2024 - AHO -->
+    <div class="timeline-item">
+      <div class="timeline-date"><i class="fas fa-building"></i> 2024</div>
+      <div class="timeline-content">
+        <h3>Temporary position at AHO</h3>
+        <p>First job in Norway outside of retail.</p>
+      </div>
+    </div>
+
+    <!-- 2024 - SheCodes -->
+    <div class="timeline-item">
+      <div class="timeline-date"><i class="fas fa-code"></i> 2024</div>
+      <div class="timeline-content">
+        <h3>SheCodes Responsive</h3>
+        <p>HTML, CSS, Hosting, Bootstrap, SEO.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date"><i class="fas fa-code"></i> 2024</div>
+      <div class="timeline-content">
+        <h3>SheCodes Plus</h3>
+        <p>HTML, CSS, JavaScript, API, Hosting, GIT.</p>
+      </div>
+    </div>
+
+    <!-- 2023-2024 - Job Seeker -->
+    <div class="timeline-item">
+      <div class="timeline-date"><i class="fas fa-search"></i> 2023-2024</div>
+      <div class="timeline-content">
+        <h3>Active job seeker</h3>
+        <p>Learned a lot about job applications and the tough post-COVID job market.</p>
+      </div>
+    </div>
+
+    <!-- 2023 - Master's Degree -->
+    <div class="timeline-item">
+      <div class="timeline-date"><i class="fas fa-graduation-cap"></i> 2023</div>
+      <div class="timeline-content">
+        <h3>Master’s in Virtual & Augmented Reality</h3>
+        <p>Goldsmiths, University of London (XR, 3D environments, UX/UI, Unity).</p>
+      </div>
+    </div>
+
+    <!-- 2022 - Bachelor's Degree -->
+    <div class="timeline-item">
+      <div class="timeline-date"><i class="fas fa-graduation-cap"></i> 2022</div>
+      <div class="timeline-content">
+        <h3>Bachelor’s in Graphic Design & Animation</h3>
+        <p>University of Huddersfield (Visual design, animation, UX).</p>
+      </div>
+    </div>
+
+    <!-- 2017 - Disney -->
+    <div class="timeline-item">
+      <div class="timeline-date"><i class="fas fa-mouse-pointer"></i> 2017-2018</div>
+      <div class="timeline-content">
+        <h3>Walt Disney World</h3>
+        <p>Cultural Representative, operational work, customer service at Epcot, Orlando.</p>
+      </div>
+    </div>
+
+    <!-- 2017 - Interrail -->
+    <div class="timeline-item">
+      <div class="timeline-date"><i class="fas fa-train"></i> 2017</div>
+      <div class="timeline-content">
+        <h3>Interrail through Europe</h3>
+        <p>Visited Austria, Belgium, Croatia, Liechtenstein, Luxembourg, Netherlands, Vatican City, Italy, Switzerland, Slovenia.</p>
+      </div>
+    </div>
+
+    <!-- 2014 - UK Exchange -->
+    <div class="timeline-item">
+      <div class="timeline-date"><i class="fas fa-plane"></i> 2014-2015</div>
+      <div class="timeline-content">
+        <h3>Moved to Poole, UK</h3>
+        <p>Exchange year at Bournemouth & Poole College.</p>
+      </div>
+    </div>
+
+    <!-- 2003 - Reading -->
+    <div class="timeline-item">
+      <div class="timeline-date"><i class="fas fa-book"></i> 2003</div>
+      <div class="timeline-content">
+        <h3>Learned to read</h3>
+        <p>The beginning of a lifelong book obsession 📖✨.</p>
+      </div>
+    </div>
+
+    <!-- 1997 - Born -->
+    <div class="timeline-item">
+      <div class="timeline-date"><i class="fas fa-baby"></i> 1997</div>
+      <div class="timeline-content">
+        <h3>Born</h3>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
     </section>
 
     <!-- Footer -->
