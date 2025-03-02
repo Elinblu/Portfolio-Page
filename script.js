@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const words = document.querySelectorAll(".sliding-text .word");
 
   if (words.length > 0) {
-    words[0].classList.add("active"); // Vis første ord med en gang
+    words[0].classList.add("active");
     console.log("Første ord aktivert:", words[0].textContent);
 
     let index = 0;
@@ -44,4 +44,42 @@ document.addEventListener("DOMContentLoaded", function () {
   } else {
     console.error("Ingen ord funnet i .sliding-text");
   }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const timelineItems = document.querySelectorAll(".timeline-item");
+
+  function checkScroll() {
+    let triggerBottom = window.innerHeight * 0.85;
+
+    timelineItems.forEach((item) => {
+      const itemTop = item.getBoundingClientRect().top;
+
+      if (itemTop < triggerBottom) {
+        item.classList.add("appear");
+      } else {
+        item.classList.remove("appear");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", checkScroll);
+  checkScroll();
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const skillItems = document.querySelectorAll(".skill-list span");
+
+  function checkScroll() {
+    let triggerBottom = window.innerHeight * 0.85;
+
+    skillItems.forEach((item) => {
+      const itemTop = item.getBoundingClientRect().top;
+      if (itemTop < triggerBottom) {
+        item.classList.add("appear");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", checkScroll);
+  checkScroll();
 });

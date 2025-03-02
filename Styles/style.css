@@ -8,19 +8,25 @@ body {
   padding: 0;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 /* ======= NAVBAR ======= */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
-  background: transparent; /* Gjør den usynlig */
+  background: transparent;
   transition: background 0.4s ease-in-out;
   padding: 10px 20px;
 }
 
 .navbar.scrolled {
-  background: rgba(10, 10, 10, 0.95); /* Blir synlig når du scroller */
+  background: rgba(10, 10, 10, 0.95);
 }
 
 .navbar .container {
@@ -77,94 +83,28 @@ body {
   font-size: 22px;
   font-weight: 400;
   color: #bbbbbb;
-  position: relative;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 30px; /* Sørger for at teksten holder seg på samme plass */
-  width: 100%; /* Sørger for at den holder seg sentrert */
+  height: 30px;
+  width: 100%;
   overflow: hidden;
   margin-top: 10px;
 }
 
 .sliding-text .word {
   opacity: 0;
-  position: absolute; /* Fjerner hoppingen */
+  position: absolute;
   transition: opacity 1s ease-in-out;
-  width: 100%; /* Sørger for at ordene ikke forskyves */
-  text-align: center; /* Holder teksten sentrert */
+  width: 100%;
 }
 
 .sliding-text .word.active {
   opacity: 1;
 }
 
-/* ======= PROJECTS SECTION ======= */
-.projects-section {
-  padding: 80px 20px;
-  background-color: #0a0a0a;
-}
-
-.section-title {
-  font-size: 28px;
-  font-weight: 700;
-  color: #8f00ff;
-  margin-bottom: 30px;
-}
-
-.projects-grid {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.project-card {
-  background: rgba(30, 30, 30, 0.7);
-  border-radius: 12px;
-  padding: 20px;
-  width: 320px;
-  text-align: center;
-  transition: transform 0.3s ease-in-out, box-shadow 0.5s ease-in-out;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.project-card img {
-  width: 100%; /* Sikrer at bildene vises riktig */
-  height: auto;
-  border-radius: 8px;
-}
-
-.project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 25px rgba(143, 0, 255, 0.6);
-}
-
-/* ======= FOOTER ======= */
-.footer {
-  background: linear-gradient(180deg, #0a0a0a 0%, #15002b 100%);
-  padding: 30px;
-  font-size: 16px;
-  color: #ffffff;
-}
-
-.social-icons a {
-  color: #ffffff;
-  font-size: 24px;
-  margin: 0 10px;
-  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
-}
-
-.social-icons a:hover {
-  color: #8f00ff;
-  transform: scale(1.1);
-}
-
-/* ========== ABOUT SECTION ========== */
+/* ======= ABOUT SECTION ======= */
 .about {
   padding: 80px 0;
+  text-align: center;
 }
 
 .about h1 {
@@ -172,27 +112,41 @@ body {
   font-weight: 700;
   text-align: center;
   margin-bottom: 40px;
-}
-
-/* Profilbildet */
-.profile-image {
   width: 100%;
-  max-width: 250px;
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(143, 0, 255, 0.5);
   display: block;
-  margin: auto;
 }
 
-/* Teksten */
+/* Text */
 .about p {
   font-size: 18px;
   line-height: 1.6;
   color: #d3d3d3;
   margin-bottom: 15px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* ========== Knapper (Download CV + Contact Me) ========== */
+/* Profil Picture */
+.profile-image {
+  float: left;
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  margin-right: 30px;
+  margin-left: 130px;
+  box-shadow: 0 0 15px rgba(143, 0, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+  .profile-image {
+    float: none;
+    display: block;
+    margin: 0 auto 20px auto;
+  }
+}
+
+/* ======= BUTTONS ======= */
 .button-group {
   margin-top: 20px;
   display: flex;
@@ -200,76 +154,98 @@ body {
   justify-content: center;
 }
 
-.btn-download,
-.btn-contact {
+.btn {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 12px 24px;
   font-size: 16px;
   font-weight: 600;
-  border: 2px solid #8f00ff;
-  border-radius: 5px;
   text-decoration: none;
-  transition: all 0.3s ease;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
 }
 
-.btn-download {
+.btn-download,
+.btn-contact {
+  background-color: rgba(143, 0, 255, 0.2);
+  color: #fff;
+  border: 2px solid #8f00ff;
+  box-shadow: 0 0 15px rgba(143, 0, 255, 0.7);
+}
+.btn-download:hover,
+.btn-contact:hover {
+  background-color: transparent;
   color: #8f00ff;
 }
 
-.btn-contact {
-  color: #ffffff;
-  background: #8f00ff;
+/* Mobile friendly */
+@media (max-width: 768px) {
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
-.btn-download:hover {
-  background: #8f00ff;
-  color: #fff;
-}
-
-.btn-contact:hover {
-  background: #6b00cc;
-}
-
-/* ========== SKILLS SECTION ========== */
+/* ======= SKILLS SECTION ======= */
 .skills {
   margin-top: 60px;
   text-align: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
-
 .skills h2 {
   font-size: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
-/* Kategorier */
 .skill-category {
-  margin-bottom: 25px;
+  margin-bottom: 35px;
 }
 
 .skill-category h3 {
   font-size: 22px;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   color: #8f00ff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-/* Ferdighetsliste */
+/* Skills */
 .skill-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 25px;
 }
 
 .skill-list span {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 8px 15px;
-  border-radius: 20px;
+  background: rgba(143, 0, 255, 0.2);
+  padding: 12px 20px;
+  border-radius: 25px;
   font-size: 16px;
   color: #ffffff;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(143, 0, 255, 0.5);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease-in-out;
 }
 
-/* ========== EXPERIENCE SECTION ========== */
+.skill-list span.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skill-category.fundamental h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #8f00ff;
+  text-transform: uppercase;
+}
+
+/* ======= EXPERIENCE SECTION ======= */
 .experience {
   margin-top: 60px;
   text-align: center;
@@ -280,41 +256,82 @@ body {
   margin-bottom: 20px;
 }
 
-/* Tidslinjen */
+/* TIMELINE */
+.timeline {
+  position: relative;
+  margin: 40px auto;
+  padding: 20px 0;
+  max-width: 900px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background: rgba(143, 0, 255, 0.5);
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.timeline-item.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-date {
+  font-size: 18px;
+  font-weight: bold;
+  color: #8f00ff;
+  display: block;
+  margin-bottom: 10px;
+}
+
 .timeline-content {
   background: rgba(255, 255, 255, 0.05);
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(143, 0, 255, 0.3);
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.3s ease-in-out;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Sørger for lik padding nederst */
-  min-height: 100px; /* Sikrer at boksene har lik høyde */
 }
 
-.timeline-item:hover .timeline-content {
-  opacity: 1;
-  max-height: 200px;
-  padding: 20px;
-  box-shadow: 0 0 15px rgba(143, 0, 255, 0.7);
+/* ======= FOOTER ======= */
+.footer {
+  background: linear-gradient(180deg, #0a0a0a 0%, #15002b 100%);
+  padding: 30px;
+  font-size: 16px;
+  color: #ffffff;
 }
 
-/* Gjør boksene mer rektangulære */
-.timeline-content {
-  min-width: 250px; /* Juster bredden for et mer rektangulært utseende */
-  max-width: 350px;
+/* SOCIAL ICONS */
+.social-icons a {
+  color: #ffffff;
+  font-size: 24px;
+  margin: 0 10px;
+  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
-/* Legger til en linje under teksten for visuell balanse */
-.timeline-content::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 2px;
-  background: rgba(143, 0, 255, 0.5);
-  margin-top: 10px;
+.social-icons a:hover {
+  color: #8f00ff;
+  transform: scale(1.1);
 }
