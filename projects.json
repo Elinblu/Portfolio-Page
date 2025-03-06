@@ -1,0 +1,26 @@
+[
+  {
+    "id": "weather-app",
+    "title": "Weather App" /* h1 */,
+    "description": "A sleek weather app built with JavaScript and OpenWeather API." /* p */,
+    "image": "images/project1.jpg" /* img src */,
+    "technologies": ["JavaScript", "API", "CSS"] /* ul > li */,
+    "github": "https://github.com/Elinblu/weather-app" /* a href */
+  },
+  {
+    "id": "portfolio",
+    "title": "Portfolio Website" /* h1 */,
+    "description": "A fully responsive portfolio showcasing my work in frontend, XR, and design." /* p */,
+    "image": "images/project2.jpg" /* img src */,
+    "technologies": ["HTML", "CSS", "JavaScript"] /* ul > li */,
+    "github": "https://github.com/Elinblu/portfolio" /* a href */
+  },
+  {
+    "id": "vr-experience",
+    "title": "VR Experience" /* h1 */,
+    "description": "An immersive VR project built using Unity and C#." /* p */,
+    "image": "images/project3.jpg" /* img src */,
+    "technologies": ["Unity", "C#", "VR"] /* ul > li */,
+    "github": "https://github.com/Elinblu/vr-experience" /* a href */
+  }
+]

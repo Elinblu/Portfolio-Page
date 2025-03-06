@@ -109,3 +109,41 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+// Henter prosjekt-ID fra URL-en (f.eks. project.html?id=weather-app)
+const urlParams = new URLSearchParams(window.location.search);
+const projectId = urlParams.get("id");
+
+// Henter JSON-filen
+fetch("projects.json")
+  .then((response) => response.json())
+  .then((projects) => {
+    // Finner riktig prosjekt basert på ID
+    const project = projects.find((p) => p.id === projectId);
+
+    if (project) {
+      // Fyller inn HTML-en med data fra prosjektet
+      document.getElementById("project-title").textContent = project.title;
+      document.getElementById("project-description").textContent =
+        project.description;
+      document.getElementById("project-image").src = project.image;
+      document.getElementById("project-image").alt = project.title;
+
+      // Legger til teknologier i en liste
+      const techList = document.getElementById("project-technologies");
+      techList.innerHTML = "";
+      project.technologies.forEach((tech) => {
+        const li = document.createElement("li");
+        li.textContent = tech;
+        techList.appendChild(li);
+      });
+
+      // Oppdaterer GitHub-linken
+      document.getElementById("project-github").href = project.github;
+    } else {
+      // Viser feilmelding hvis prosjektet ikke finnes
+      document.getElementById("project-container").innerHTML =
+        "<h1>Project not found</h1>";
+    }
+  })
+  .catch((error) => console.error("Error fetching projects:", error));
