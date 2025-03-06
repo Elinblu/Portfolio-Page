@@ -83,3 +83,29 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", checkScroll);
   checkScroll();
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const navbarToggler = document.querySelector(".navbar-toggler");
+  const navbarCollapse = document.querySelector("#navbarNav");
+
+  navbarToggler.addEventListener("click", function () {
+    navbarCollapse.classList.toggle("show");
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const navbarToggler = document.querySelector(".navbar-toggler");
+  const navbarCollapse = document.querySelector("#navbarNav");
+
+  navbarToggler.addEventListener("click", function () {
+    let isOpen = navbarCollapse.classList.contains("show");
+
+    if (isOpen) {
+      navbarCollapse.classList.remove("show");
+      navbarToggler.setAttribute("aria-expanded", "false");
+    } else {
+      navbarCollapse.classList.add("show");
+      navbarToggler.setAttribute("aria-expanded", "true");
+    }
+  });
+});

@@ -23,6 +23,8 @@ body {
   background: transparent;
   transition: background 0.4s ease-in-out;
   padding: 10px 20px;
+  border-bottom: none !important;
+  box-shadow: none !important;
 }
 
 .navbar.scrolled {
@@ -57,6 +59,32 @@ body {
 
 .navbar-nav .nav-link:hover {
   color: #8f00ff !important;
+}
+
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
+
+.navbar-collapse {
+  transition: height 0.3s ease-in-out;
+}
+
+.navbar-nav {
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    display: block !important;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+  }
+
+  .navbar-collapse.show {
+    height: auto;
+  }
 }
 
 /* ======= HERO SECTION ======= */
@@ -429,5 +457,106 @@ textarea {
 
   .btn-send {
     width: 100%;
+  }
+}
+
+/* ======= HAMBURGER MENY ======= */
+
+.navbar-toggler {
+  border: none !important;
+  background: none !important;
+  padding: 5px;
+}
+
+.navbar-toggler-icon {
+  background-image: none !important;
+  width: 30px;
+  height: 3px;
+  background-color: #8f00ff;
+  display: block;
+  position: relative;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+  background-image: none;
+  width: 30px;
+  height: 3px;
+  background-color: #8f00ff;
+  display: block;
+  position: relative;
+}
+
+.navbar-toggler .navbar-toggler-icon::before,
+.navbar-toggler .navbar-toggler-icon::after {
+  content: "";
+  width: 30px;
+  height: 3px;
+  background-color: #8f00ff;
+  display: block;
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-toggler .navbar-toggler-icon::before {
+  top: -10px;
+}
+
+.navbar-toggler .navbar-toggler-icon::after {
+  top: 10px;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  background-color: transparent;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+/* ======= MOBILMENY ======= */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    display: none;
+    background: rgba(10, 10, 10, 0.95);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    z-index: 999;
+  }
+
+  @media (max-width: 991px) {
+    .navbar-collapse {
+      background: transparent;
+      transition: background 0.3s ease-in-out;
+    }
+
+    .navbar-collapse.show {
+      background: linear-gradient(
+        180deg,
+        rgba(36, 13, 49, 0.897),
+        rgba(74, 1, 129, 0.8)
+      );
+      padding: 20px 0;
+      border-radius: 10px;
+    }
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 10px 0;
   }
 }
