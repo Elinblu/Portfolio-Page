@@ -8,11 +8,9 @@ document.addEventListener("DOMContentLoaded", function () {
       navbar.classList.remove("scrolled");
     }
   });
-
   // ===== SLIDING TEXT ANIMATION =====
   const words = document.querySelectorAll(".sliding-text .word");
   let index = 0;
-
   function showNextWord() {
     words.forEach((word) => word.classList.remove("active"));
     words[index].classList.add("active");
@@ -147,3 +145,38 @@ fetch("projects.json")
     }
   })
   .catch((error) => console.error("Error fetching projects:", error));
+document.addEventListener("DOMContentLoaded", function () {
+  const container = document.getElementById("projects-container");
+  if (!container) return;
+
+  fetch("projects.json")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
+    })
+    .then((projects) => {
+      projects.forEach((project) => {
+        const card = document.createElement("div");
+        card.classList.add("project-card");
+
+        card.innerHTML = `
+          <img src="${project.image}" alt="${project.title}" />
+          <h3>${project.title}</h3>
+          <p>${project.description}</p>
+          <ul>
+            ${project.technologies.map((tech) => `<li>${tech}</li>`).join("")}
+          </ul>
+          <a href="${project.github}" target="_blank">View on GitHub</a>
+        `;
+
+        container.appendChild(card);
+      });
+    })
+    .catch((error) => {
+      console.error("Error loading projects:", error);
+      container.innerHTML =
+        "<p>Couldn't load projects. Please try again later.</p>";
+    });
+});

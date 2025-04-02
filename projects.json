@@ -1,26 +1,26 @@
 [
   {
     "id": "weather-app",
-    "title": "Weather App" /* h1 */,
-    "description": "A sleek weather app built with JavaScript and OpenWeather API." /* p */,
-    "image": "images/project1.jpg" /* img src */,
-    "technologies": ["JavaScript", "API", "CSS"] /* ul > li */,
-    "github": "https://github.com/Elinblu/weather-app" /* a href */
+    "title": "Weather App",
+    "description": "A sleek weather app built with JavaScript and OpenWeather API.",
+    "image": "images/project1.jpg",
+    "technologies": ["JavaScript", "API", "CSS"],
+    "github": "https://github.com/Elinblu/weather-app"
   },
   {
     "id": "portfolio",
-    "title": "Portfolio Website" /* h1 */,
-    "description": "A fully responsive portfolio showcasing my work in frontend, XR, and design." /* p */,
-    "image": "images/project2.jpg" /* img src */,
-    "technologies": ["HTML", "CSS", "JavaScript"] /* ul > li */,
-    "github": "https://github.com/Elinblu/portfolio" /* a href */
+    "title": "Portfolio Website",
+    "description": "A fully responsive portfolio showcasing my work in frontend, XR, and design.",
+    "image": "images/project2.jpg",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "github": "https://github.com/Elinblu/portfolio"
   },
   {
     "id": "vr-experience",
-    "title": "VR Experience" /* h1 */,
-    "description": "An immersive VR project built using Unity and C#." /* p */,
-    "image": "images/project3.jpg" /* img src */,
-    "technologies": ["Unity", "C#", "VR"] /* ul > li */,
-    "github": "https://github.com/Elinblu/vr-experience" /* a href */
+    "title": "VR Experience",
+    "description": "An immersive VR project built using Unity and C#.",
+    "image": "images/project3.jpg",
+    "technologies": ["Unity", "C#", "VR"],
+    "github": "https://github.com/Elinblu/vr-experience"
   }
 ]
