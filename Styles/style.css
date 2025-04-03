@@ -747,3 +747,15 @@ textarea {
   margin: 0 auto;
   display: block;
 }
+
+a.project-card,
+a.project-card:visited {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+a.project-card:hover {
+  color: #eec584;
+  text-decoration: none;
+}
