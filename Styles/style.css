@@ -568,8 +568,22 @@ textarea {
 #project-container {
   max-width: 800px;
   margin: auto;
+  margin-top: 70px;
   padding: 20px;
   text-align: center;
+}
+
+#project-container .btn-custom {
+  background-color: rgba(238, 197, 132, 0.2);
+  color: #fff;
+  border: 2px solid #eec584;
+  box-shadow: 0 0 15px rgba(238, 197, 132, 0.7);
+  margin-bottom: 30px;
+}
+
+#project-container .btn-custom:hover {
+  background-color: transparent;
+  color: #eec584;
 }
 
 #project-title {
@@ -720,4 +734,16 @@ textarea {
 
 #work-page .project-card {
   margin-bottom: 50px;
+}
+
+#weather-app-page .project-images img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+#weather-app-page .project-images img.img-fluid {
+  max-width: 70%;
+  margin: 0 auto;
+  display: block;
 }

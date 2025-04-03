@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Optimization -->
+    <title>Weather App | Elin Blütecher Holter</title>
+    <meta
+      name="description"
+      content="Weather app built with JavaScript and SheCodes Weather API to display real-time weather data."
+    />
+    <meta
+      name="keywords"
+      content="Weather App, JavaScript, SheCodes, API, Frontend"
+    />
+    <meta name="author" content="Elin Blütecher Holter" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Poppins:wght@300;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome for Icons -->
+    <script
+      src="https://kit.fontawesome.com/04341be7b8.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="../Styles/style.css" />
+  </head>
+
+  <body id="weather-app-page">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html" title="Go to Home"
+          >Elin Blütecher Holter</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html" title="Home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../about.html" title="About me"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../work.html" title="My Work">Work</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../contact.html" title="Contact me"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Project Content -->
+    <section id="project-container" class="container mt-5">
+      <h1 class="text-center mb-4">Weather App – SheCodes Project</h1>
+
+      <!-- Project Description -->
+      <h3>About the Project</h3>
+      <p>
+        This Weather App was created as part of the SheCodes course, where I was
+        tasked with building a simple weather app using
+        <strong>JavaScript</strong> and the
+        <strong>SheCodes Weather API</strong>. The goal was to display real-time
+        weather data for cities, including temperature, humidity, wind speed,
+        and weather description.
+      </p>
+
+      <!-- Project Image -->
+      <div class="project-images mb-4">
+        <img
+          src="../images/weatherapp-frontpage.png"
+          alt="Weather App Overview"
+          class="img-fluid mb-3"
+        />
+      </div>
+
+      <p>
+  You can also check out the live version of the Weather App by clicking
+  <a href="https://weatheratm.netlify.app/" target="_blank">here</a>.
+</p>
+
+
+      <!-- Building the Project -->
+      <h3>Building the Project</h3>
+      <p>
+        I started by creating the basic structure using
+        <strong>HTML</strong> and <strong>CSS</strong>, then I connected the app
+        to the <strong>SheCodes Weather API</strong> to fetch the weather data.
+        This allowed the app to show live weather information for a selected
+        city.
+      </p>
+    </br>
+
+      <!-- Project Image (Weather Icons) -->
+      <div class="project-images mb-4">
+        <img
+          src="../images/weather-icons.png"
+          alt="Weather App Icons"
+          class="img-fluid mb-3"
+        />
+      </div>
+
+      <p>
+        While the course provided the basic structure, I decided to add some
+        extra features to make the app more interactive:
+      </p>
+
+      <!-- List of Extra Features -->
+      <ul>
+        <li>
+          <strong>Favorite Cities:</strong> I added a heart button that allows
+          users to mark and save their favorite cities, making it easy to check
+          the weather for those cities at any time.
+        </li>
+        </br>
+        <!-- Image for Favorite Cities -->
+        <div class="project-images mb-4">
+          <img
+            src="../images/favorite-weather.png"
+            alt="Favorite Cities Feature"
+            class="img-fluid mb-3"
+          />
+        </div>
+        <li>
+          <strong>Dynamic Background:</strong> The background color of the app
+          changes depending on the weather conditions in the selected city,
+          adding a more lively and interactive feel to the app.
+        </li>
+        </br>
+        <!-- Image for Dynamic Background -->
+        <div class="project-images mb-4">
+          <img
+            src="../images/weather-lilac.png"
+            alt="Weather App with Dynamic Background"
+            class="img-fluid mb-3"
+          />
+        </div>
+      </ul>
+
+      <!-- Challenges and Solutions -->
+      <h3>Challenges & Solutions</h3>
+      <p>
+        Initially, I created a version that worked and displayed the data, but I
+        wasn’t satisfied with how it looked or functioned. I decided to scrap
+        that version and start fresh. This time, I focused on improving both the
+        design and functionality, ensuring everything worked smoothly and looked
+        more polished.
+      </p>
+    </br>
+
+      <!-- Image for Old Version -->
+            <div class="project-images mb-4">
+        <img
+          src="../images/oldweather.png"
+          alt="Old version of the Weather App"
+          class="img-fluid mb-3"
+        />
+        <p>Old version</p>
+      </div>
+
+      <!-- What I Learned -->
+      <h3>What I Learned</h3>
+      <p>
+        This project helped me strengthen my <strong>JavaScript</strong> skills,
+        particularly in handling real-time changing data (like weather
+        information) and how to structure the app so that it automatically
+        updates when the user searches for different cities.
+      </p>
+
+      <!-- Technologies Used -->
+      <h3>Technologies Used:</h3>
+      <ul id="project-technologies">
+        <li>JavaScript</li>
+        <li>CSS</li>
+        <li>SheCodes Weather API</li>
+      </ul>
+
+    </br>
+
+      <a
+  href="https://weatheratm.netlify.app/"
+  target="_blank"
+  class="btn btn-custom mb-5"
+>
+  See the live project here
+</a>
+
+      <a
+        href="https://github.com/Elinblu/weather-app"
+        target="_blank"
+        class="btn btn-custom mb-5"
+        >See the full project on GitHub</a
+      >
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-center mt-5">
+      <p>© 2025 Elin Blütecher Holter</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
